@@ -20,16 +20,16 @@ function setup(){
 
    
     fixSprite1=createSprite(100,580,180,30);
-    fixSprite1.shapeColor="red";
+    fixSprite1.shapeColor="pink";
 
     fixSprite2=createSprite(300,580,180,30);
-    fixSprite2.shapeColor="green";
+    fixSprite2.shapeColor="purple";
 
     fixSprite3=createSprite(500,580,180,30);
-    fixSprite3.shapeColor="blue";
+    fixSprite3.shapeColor="crimson";
 
     fixSprite4=createSprite(700,580,180,30);
-    fixSprite4.shapeColor="yellow";
+    fixSprite4.shapeColor="red";
 
     
 
@@ -48,21 +48,21 @@ function draw() {
    
   if(movingSprite.isTouching(fixSprite4)){
     music.play()
-    movingSprite.shapeColor="yellow";
+    movingSprite.shapeColor="red";
     movingSprite.bounceOff(fixSprite4);
     
   }
   
   else if(movingSprite.isTouching(fixSprite3)){
     music.stop()
-    movingSprite.shapeColor="blue";
+    movingSprite.shapeColor="crimson";
     bounceOff(movingSprite,fixSprite3)
    
   }
     
   else if(movingSprite.isTouching(fixSprite2)){
     music.stop()
-    movingSprite.shapeColor="green";
+    movingSprite.shapeColor="purple";
     bounceOff(movingSprite,fixSprite2)
     movingSprite.velocityX=0;
     movingSprite.velocityY=0;
@@ -70,7 +70,7 @@ function draw() {
   
   else if(movingSprite.isTouching(fixSprite1)){
     music.stop()
-    movingSprite.shapeColor="red";
+    movingSprite.shapeColor="pink";
     movingSprite.bounceOff(fixSprite1)
   }
 
